@@ -111,14 +111,14 @@ int main()
 //    else
 //        cout << "the letter " << letter << " is small, Capital: " << char((int)letter - 32);
 
-char c;
-cout << "Enter the char: ";
-cin >> c;
+    char c;
+    cout << "Enter the char: ";
+    cin >> c;
 
-if(c >= 'a' && c <= 'z')
-    cout << "the letter " << c << " is small";
-else
-    cout << "the capital " << c << " is capital";
+    if(c >= 'a' && c <= 'z')
+        cout << "the letter " << c << " is small";
+    else
+        cout << "the capital " << c << " is capital";
 
     return 0;
 }
