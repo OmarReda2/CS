@@ -24,10 +24,21 @@ int main()
 
 
 
-//    char firstLetter;
-//    int birthMonth, birthYear;
-//    cin >> firstLetter >> birthMonth >> birthYear;
-//    cout << firstLetter << '\\' << birthMonth << '\\' << birthYear;
+    char firstLetter;
+    int birthMonth, birthYear;
+
+    cout << "enter the first letter: ";
+    cin >> firstLetter;
+
+    cout << "enter the birth of month: ";
+    cin >> birthMonth;
+
+    cout << "enter the birth of year: ";
+    cin >> birthYear;
+    int BOYModified = birthYear % 100;
+
+    cout << "Your Id iS: " << firstLetter << '\\' << birthMonth << '\\' << BOYModified << endl;
+    cout << "your age is: " <<  2021 - birthYear;
 
     return 0;
 }
