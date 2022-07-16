@@ -16,5 +16,18 @@ int main()
 
 // ===================================================== //
 
+//    int salary;
+//    cout << "Please enter the salary: ";
+//    cin >> salary;
+//
+//    cout << "The salary value is: " << salary;
+
+
+
+//    char firstLetter;
+//    int birthMonth, birthYear;
+//    cin >> firstLetter >> birthMonth >> birthYear;
+//    cout << firstLetter << '\\' << birthMonth << '\\' << birthYear;
+
     return 0;
 }
