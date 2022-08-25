@@ -27,10 +27,16 @@ public:
 	int getAge() {
 		return age;
 	}
+
+	Person(string n, int a)
+	{
+		name = n;
+		age = a;
+	}
 };
 
 
-class Customer : public Person{
+class Customer : public Person {
 private:
 	bool isLoyal;
 
@@ -41,6 +47,11 @@ public:
 
 	bool getIsLoyal() {
 		return isLoyal;
+	}
+
+	Customer() : Person("Empty", 0)
+	{
+
 	}
 };
 
@@ -69,11 +80,40 @@ public:
 	int netSalary() {
 		return salary - deduction;
 	}
+
+	Employee(string n, int a) : Person(n, a)
+	{
+
+	}
 };
+
+class Calculator {
+public:
+	const static int numOfCalc;
+
+	static void add(int a, int b) {
+		cout << a + b;
+	}
+
+	static void mult(int a, int b) {
+		cout << a * b;
+	}
+
+
+	
+};
+
 int main()
 {
 	Customer c1;
 	c1.setName("Omar");
-	cout << c1.getName();
+	cout << c1.getName() << endl;
+
+	Employee emp("Mohamed", 30);
+	cout << emp.getName() << " " << emp.getAge() << endl;
+
+	cout << Calculator::numOfCalc;
+	Calculator::add(1, 2);
+	Calculator::mult(1, 2);
 }
 
