@@ -18,17 +18,79 @@ using namespace std;
 
 
 #pragma region Template Multiple parameter
-template<class T1, class T2>
-T1 sum(T1 x, T2 y) {
-    return x + y;
-}
+//template<class T1, class T2>
+//T1 sum(T1 x, T2 y) {
+//    return x + y;
+//}
+//int main()
+//{
+//    double x = 10.5;
+//    int y = 11;
+//    cout << sum(x, y) << endl;
+//    cout << sum<int,int>(x, y) << endl;
+//}
+#pragma endregion
+
+
+
+#pragma region Template and Classes
+//template<class T>
+//class Number {
+//private:
+//	T first, second;
+//public:
+//	Number(T a, T b) {
+//		first = a;
+//		second = b;
+//	}
+//
+//	T max();
+//};
+//
+//template<class T>
+//T Number<T>::max() {
+//	return (first > second ? first : second);
+//}
+//int main() 
+//{
+//	Number<int> num(1, 2); 
+//	cout << num.max();
+//}
+#pragma endregion
+
+
+
+#pragma region Template specilization
+template<class T>
+class A_char {
+public:
+	A_char(T x)
+	{
+		cout << x << " Is not character" << endl;
+	}
+
+};
+
+template<>
+class A_char<char> {
+public:
+	A_char(char x)
+	{
+		cout << x << " Is a character" << endl;
+	}
+};
+
 int main()
 {
-    double x = 10.5;
-    int y = 11;
-    cout << sum(x, y) << endl;
-    cout << sum<int,int>(x, y) << endl;
+	A_char<int> obj1(10);
+	A_char<char> obj2('c');
 }
 #pragma endregion
+
+
+
+
+
+
 
 
