@@ -136,6 +136,32 @@ public:
 
 
 
+// -------- Exception Handling ----------- //
+//05:
+
+int divCalc(int x, int y) {
+	try
+	{
+		if (y == 0)
+			throw runtime_error("Atempt dividing by zero");
+		else if (y < 0)
+			throw "error";
+		else
+			return x / y;
+
+	}
+	catch (exception& e)
+	{
+		cout << e.what();
+	}
+	catch (...)
+	{
+		cout << "Atempt dividing by negative";
+	}
+}
+
+
+
 
 int main()
 {
@@ -169,6 +195,14 @@ int main()
 	Bus bus(50, "bs123", "Id4456", 120, 1000, 200);
 	truck.display();
 	bus.display();*/
+
+
+
+	// -------- Exception Handling ----------- //
+	// //05:
+	int x = 5, y = 0;
+	divCalc(x, y);
+	
 
 
 
