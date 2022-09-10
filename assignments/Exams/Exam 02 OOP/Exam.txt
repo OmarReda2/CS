@@ -1,0 +1,154 @@
+Exam 02
+Q1:
+Encapsulation : Add to the class more security which make the class members(functions & attributes) unreachable directly (it may be accessed by getters and setters)
+Inheritance : A class (child) would have the functions, attributes & constructor of another class (parent) by inheritance
+Polymorphism : A function that may have different implementations 
+Abstraction : functions with only the prototype but it cant be called untill impleminting it
+
+
+Q2:
+public: the class members can be accessed directly from any where
+protected: the class members can ONLY be accessed directly from its children 
+private: the class members can NOT be accessed directly from any where
+
+
+
+Q3:
+#include <iostream>
+
+using namespace std;
+
+template<class T> 
+int myFunc(T x, T y) {
+	return x + y
+}
+
+int main()
+{
+	myFunc(2.2, 3.5);
+	myFunc(2, 3);
+
+	return 0;
+}
+
+
+
+Q4:
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	int x;
+	cin >> x;
+	try
+	{
+		if (x == 0)
+			throw 0;
+
+
+	}
+	catch (int er)
+	{
+		cout << "cant divide by " << er;
+	}
+	return 0;
+}
+
+
+
+
+
+Q4:
+Overloading: A function that may have different paramters and return type
+Overriding: A function that may have different implementation with the same prototype
+
+
+
+
+
+
+Q5:
+#include <iostream>
+
+
+using namespace std;
+
+class Point2D {
+private:
+	float x, y = 0.0;
+
+public:
+	Point2D(float x, float y) {
+		this->x = x;
+		this->y = y;
+	}
+
+	float getX() {
+		return x;
+	}
+
+	float getY() {
+		return y;
+	}
+
+	int* getXY() {
+		int myArr[2] = { x, y };
+		return myArr;
+	}
+
+	void setX(float num) {
+		x = num;
+	}
+
+	void setY(float num) {
+		y = num;
+	}
+
+	void setXY(float x, float y) {
+		this->x = x;
+		this->y = y;
+	}
+};
+
+
+class Point3D: public Point2D {
+private:
+	float z = 0.0;
+
+public:
+	Point3D(float z,float x, float y):
+		Point2D(x, y)
+	{
+		this->z = z;
+	}
+
+	float getZ() {
+		return z;
+	}
+
+
+	void setZ(float num) {
+		z = num;
+	}
+
+	int* getXYZ() {
+		int myArr[] = {z, getX(), getY()};
+		return myArr;
+	}
+
+	void setXYZ(float x, float y, float z) {
+		this->z = z;
+		setXY(x, y);
+	}
+};
+
+
+int main()
+{
+	
+}
+
+
