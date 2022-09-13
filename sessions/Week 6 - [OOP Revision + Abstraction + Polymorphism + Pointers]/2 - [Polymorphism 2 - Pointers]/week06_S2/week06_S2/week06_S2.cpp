@@ -11,14 +11,14 @@ using namespace std;
 //	int x = 5;
 //	int* ptr;
 //	ptr = &x;
-//	cout << ptr << ' ' << *ptr << ' ' << &ptr;
+//	cout << ptr << ' ' << *ptr << ' ' << &ptr << endl;
 //
 //
 //	*ptr = 10;
-//	cout << ptr << ' ' << *ptr << ' ' << &ptr;
+//	cout << ptr << ' ' << *ptr << ' ' << &ptr << endl;
 //
 //	*ptr++;
-//	cout << ptr << ' ' << *ptr << ' ' << &ptr;
+//	cout << ptr << ' ' << *ptr << ' ' << &ptr << endl;
 //}
 #pragma endregion
 
@@ -87,37 +87,39 @@ using namespace std;
 //	persons[1] = new Teacher();
 //
 //}
-
 #pragma endregion
 
-class Person {
-public:
-	int x, y;
-	virtual void speak() {
-		cout << "person\n";
-	}
-};
 
-class Student : public Person {
-public:
-	int z, w;
-	 void speak() {
-		cout << "student\n";
-	}
-};
-
-
-
-int main()
-{
-	Person* p = new Student();
-	(*p).speak();
-	//or
-	p->speak();
-	
-
-
-}
+#pragma region Polymorphism & pointers
+//class Person {
+//public:
+//	int x, y;
+//	virtual void speak() {
+//		cout << "person\n";
+//	}
+//};
+//
+//class Student : public Person {
+//public:
+//	int z, w;
+//	void speak() {
+//		cout << "student\n";
+//	}
+//};
+//
+//
+//
+//int main()
+//{
+//	Person* p = new Student();
+//	(*p).speak();
+//	//or
+//	p->speak();
+//
+//
+//
+//}
+#pragma endregion
 
 
 
