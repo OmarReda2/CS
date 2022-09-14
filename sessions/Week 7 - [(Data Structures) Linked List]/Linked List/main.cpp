@@ -53,7 +53,8 @@ public:
 
     void pop(){
         if(size() == 1){
-            delete tail;
+            delete tail; // or
+//            delete head;
             tail = head = nullptr;
         }else{
             Node<T>* iterator = head;
@@ -62,7 +63,6 @@ public:
             }
             delete tail;
             tail = iterator;
-            tail->next = nullptr;
         }
         length--;
     }
@@ -84,7 +84,6 @@ public:
             }
             newNode->next = iterator->next;
             iterator->next = newNode;
-            iterator = newNode;
             length++;
         }
 
@@ -108,7 +107,7 @@ public:
 //            Node<T>* afterMe = iterator->next->next; // or
             Node<T>* afterMe = toBeDeleted->next;
             delete toBeDeleted;
-            iterator.next = afterMe;
+            iterator->next = afterMe;
             length--;
         }
     }
