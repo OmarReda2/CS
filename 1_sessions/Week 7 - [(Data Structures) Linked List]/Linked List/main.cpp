@@ -90,7 +90,7 @@ public:
     }
 
     void erase(int index){
-        assert(index >= 0 && index < length)
+        assert(index >= 0 && index < length);
         if(index = length -1){
             pop();
         }else if(index == 0){

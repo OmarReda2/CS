@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1663822774 source:e:\programming (practice & projects)\cs\practice\1_sessions\week 7 - [(data structures) linked list]\linked list\main.cpp
+	<iostream>
+	<string.h>
+	<assert.h>
+
