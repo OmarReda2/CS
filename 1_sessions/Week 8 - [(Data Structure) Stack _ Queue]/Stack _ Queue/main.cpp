@@ -94,11 +94,6 @@ private:
     Node<T>* head;
     Node<T>* tail;
 public:
-    Queue(){
-        length = 0;
-        head = tail = nullptr;
-    }
-
     bool empty(){
         return length == 0;
     }
@@ -132,6 +127,20 @@ public:
         if(empty()){
             tail = nullptr;
         }
+    }
+
+    void clear(){
+        while(!empty()){
+            pop();
+        }
+    }
+
+    Queue(){
+        length = 0;
+        head = tail = nullptr;
+    }
+    ~Queue(){
+        clear();
     }
 };
 
