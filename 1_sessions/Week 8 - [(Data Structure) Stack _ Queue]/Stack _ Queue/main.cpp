@@ -161,17 +161,17 @@ int main() {
 
 
 ////----- user-defined stack -----////
-//    Stack<int> st;
-//    st.push(5);
-//    st.push(1);
-//    st.push(7);
-//    cout << st.Top() << endl;
-//
-//    st.pop();
-//    cout << st.Top() << endl;
-//
-//    st.clear();
-//    cout << st.Top() << endl;
+    Stack<int> st;
+    st.push(5);
+    st.push(1);
+    st.push(7);
+    cout << st.Top() << endl;
+
+    st.pop();
+    cout << st.Top() << endl;
+
+    st.clear();
+    cout << st.Top() << endl;
 
 
 //// ----- built-in queue library ----- ////
@@ -185,13 +185,13 @@ int main() {
 
 
 ////----- user-defined stack -----////
-    Queue<int> q;
-    q.push(5);
-    q.push(1);
-    q.push(7);
-    cout << q.front() << endl;
-    q.pop();
-    cout << q.front() << endl;
+//    Queue<int> q;
+//    q.push(5);
+//    q.push(1);
+//    q.push(7);
+//    cout << q.front() << endl;
+//    q.pop();
+//    cout << q.front() << endl;
 
 
 }
