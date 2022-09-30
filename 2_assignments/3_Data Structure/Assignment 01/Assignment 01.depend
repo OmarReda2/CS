@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1664539626 source:c:\users\omarr\onedrive\desktop\3_data structure\assignment 01\main.cpp
+	<iostream>
+	<string.h>
+	<vector>
+
