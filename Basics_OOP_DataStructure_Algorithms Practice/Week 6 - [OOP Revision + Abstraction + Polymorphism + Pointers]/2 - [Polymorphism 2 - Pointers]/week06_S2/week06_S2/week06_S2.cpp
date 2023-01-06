@@ -6,20 +6,20 @@ using namespace std;
 
 
 #pragma region Pointers
-//int main()
-//{
-//	int x = 5;
-//	int* ptr;
-//	ptr = &x;
-//	cout << ptr << ' ' << *ptr << ' ' << &ptr << endl;
-//
-//
-//	*ptr = 10;
-//	cout << ptr << ' ' << *ptr << ' ' << &ptr << endl;
-//
-//	*ptr++;
-//	cout << ptr << ' ' << *ptr << ' ' << &ptr << endl;
-//}
+int main()
+{
+	char x = 'o';
+	char* ptr;
+	ptr = &x;
+	cout << ptr << ' ' << *ptr << ' ' << &ptr << endl;
+
+
+	*ptr = 10;
+	cout << ptr << ' ' << *ptr << ' ' << &ptr << endl;
+
+	*ptr++;
+	cout << ptr << ' ' << *ptr << ' ' << &ptr << endl;
+}
 #pragma endregion
 
 
